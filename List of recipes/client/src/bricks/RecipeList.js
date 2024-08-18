@@ -1,19 +1,40 @@
-import React from "react";
-import Recipe from "./Recipe";
+import React, { useState, useMemo } from "react";
 import '../App.css';
+import RecipesGridList from "./RecipesGridList";
+import RecipesTableList from "./RecipesTableList";
+import ViewSwitcher from "./ViewSwitcher";
+import SearchForm from "./SearchForm";
 
 function RecipeList(props) {
-    function getRecipeList(recipeList) {
-        return recipeList?.map((recipe) => {
-            return <Recipe key={recipe.id} recipe={recipe} />;
+    const [viewType, setViewType] = useState("grid");
+    const [isFullDescription, setIsFullDescription] = useState(false);
+    const [searchBy, setSearchBy] = useState("");
+
+    const filteredRecipeList = useMemo(() => {
+        return props.recipeList.filter((item) => {
+            return (
+                item.name.toLowerCase().includes(searchBy.toLowerCase()) ||
+                item.description.toLowerCase().includes(searchBy.toLowerCase())
+            );
         });
-    }
+    }, [searchBy, props.recipeList]);
+
     return (
-        <div className="recipe-list">
-            {getRecipeList(props.recipeList)}
+        <div>
+            <ViewSwitcher 
+                viewType={viewType} 
+                setViewType={setViewType} 
+                isFullDescription={isFullDescription} 
+                setIsFullDescription={setIsFullDescription} 
+            />
+            <SearchForm setSearchBy={setSearchBy} />
+            {viewType === "grid" ? (
+                <RecipesGridList recipeList={filteredRecipeList} isFullDescription={isFullDescription} />
+            ) : (
+                <RecipesTableList recipeList={filteredRecipeList} isFullDescription={isFullDescription} />
+            )}
         </div>
     );
 }
-
 
 export default RecipeList;
