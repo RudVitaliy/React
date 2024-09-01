@@ -1,6 +1,6 @@
 [
   {
-    "name": "naklíčená čočka",
+    "name": "čočka",
     "id": "c6ea4fb4d330d32b"
   },
   {
@@ -17,7 +17,9 @@
   },
   {
     "name": "červená paprika",
-    "id": "9416b19e1bd2cd11"
+    "id": "9416b19e1bd2cd11",
+    "amount": 1,
+    "unit": "ks"
   },
   {
     "name": "nasekaná petrželka",
@@ -41,7 +43,9 @@
   },
   {
     "name": "pepř",
-    "id": "cd99517791018390"
+    "id": "cd99517791018390",
+    "amount": 1,
+    "unit": "špetka"
   },
   {
     "name": "ovesné vločky",

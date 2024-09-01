@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Mathematics",
+    "shortName": "ma",
+    "description": "Mathematics (from the Greek μαθηματικός (mathématikos) = loving knowledge; μαμής (mathéma) = science, knowledge, cognition) is a science dealing with quantity, structure, space and change from a formal point of view. Mathematics is also described as a discipline that deals with the creation of abstract entities and the search for regular relationships between them.",
+    "id": "495a2f53e28edd18"
+  },
+  {
+    "name": "Physics",
+    "shortName": "ph",
+    "description": "Physics (from the Greek φυσικός (fysikos): natural, from the base φύσις (fysis): nature, archaically also force inquiry) is an exact scientific field that investigates the laws of natural phenomena. It describes the properties and manifestations of matter, antimatter, vacuum, natural forces, light and invisible radiation, heat, sound, etc.",
+    "id": "e3c7b689a47e76b0"
+  },
+  {
+    "name": "Chemistry",
+    "shortName": "ch",
+    "description": "Chemistry (Greek χημεία; archaically also lučba) is the scientific study of the properties and behavior of matter. It is a natural science that includes the elements that make up matter, down to compounds made up of atoms, molecules, and ions: their composition, structure, properties, behavior, and the changes they undergo when they react with other substances.",
+    "id": "ae3f5077053c5579"
+  },
+  {
+    "name": "History",
+    "shortName": "hi",
+    "description": "History (historical science) is a humanities and social science investigating the history (history) of man and his civilization based on the study of various sources and using various methods.",
+    "id": "dc3fd3109eb041ff"
+  },
+  {
+    "name": "English",
+    "shortName": "en",
+    "description": "",
+    "id": "0258b9979e055af1"
+  },
+  {
+    "name": "German",
+    "shortName": "ge",
+    "description": "",
+    "id": "3f9e05bc4aaa380b"
+  },
+  {
+    "name": "Physical Education",
+    "shortName": "pe",
+    "description": "Physical education (physical education) is one of the components of education that provides basic movement education, improves health and increases physical condition.",
+    "id": "fe9919c1c95564cc"
+  }
+]

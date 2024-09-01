@@ -6,56 +6,67 @@
     "ingredients": [
       {
         "id": "c6ea4fb4d330d32b",
-        "amount": 200,
+        "name": "čočka",
+        "amount": 202,
         "unit": "g"
       },
       {
         "id": "01ed1245cdfd005a",
+        "name": "mrkev",
         "amount": 1,
         "unit": "ks"
       },
       {
         "id": "95ff7d609062d4db",
+        "name": "menší červená cibule",
         "amount": 0.5,
         "unit": "ks"
       },
       {
         "id": "73fd3db102b7803d",
+        "name": "salátová okurka",
         "amount": 0.5,
         "unit": "ks"
       },
       {
         "id": "9416b19e1bd2cd11",
+        "name": "červená paprika",
         "amount": 1,
         "unit": "ks"
       },
       {
         "id": "426371a4bbc275f1",
+        "name": "nasekaná petrželka",
         "amount": 1,
         "unit": "hrst"
       },
       {
         "id": "e0e1a7f5ccef3dff",
+        "name": "lák z okurek",
         "amount": 3,
         "unit": "lžíce"
       },
       {
         "id": "d8e6bbd4d6038494",
+        "name": "olivový olej",
         "amount": 2,
         "unit": "lžíce"
       },
       {
         "id": "defe5185b23ca985",
+        "name": "med",
         "amount": 1,
         "unit": "lžíce"
       },
       {
         "id": "3f702872fb8e99f8",
+        "name": "sůl",
         "amount": 1,
         "unit": "špetka"
       },
       {
         "id": "cd99517791018390",
+        "name": "pepř",
         "amount": 1,
         "unit": "špetka"
       }
@@ -422,23 +433,33 @@
     "ingredients": [
       {
         "id": "9f02cb91fe08ee88",
+        "name": "brambory (typ B)",
         "amount": 500,
         "unit": "g"
       },
       {
         "id": "0f98ae783ce9be76",
+        "name": "kapusta",
         "amount": 0.25,
         "unit": "hlávky"
       },
       {
         "id": "bf0da9e7fe070b99",
+        "name": "slanina",
         "amount": 200,
         "unit": "g"
       },
       {
         "id": "3f702872fb8e99f8",
+        "name": "sůl",
         "amount": 1,
         "unit": "špetka"
+      },
+      {
+        "id": "eb640ba39563f93e",
+        "name": "ыыы",
+        "amount": 2,
+        "unit": "ыы"
       }
     ],
     "id": "f00a783bfd2de513"

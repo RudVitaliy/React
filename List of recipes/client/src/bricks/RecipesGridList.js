@@ -2,16 +2,23 @@ import React from "react";
 import Recipe from "./Recipe";
 import '../App.css';
 
-function RecipeGridList(props) {
+function RecipeGridList({ recipeList, isFullDescription, onEditRecipe }) {
     function getRecipeList(recipeList) {
         return recipeList?.map((recipe) => {
-            return <Recipe key={recipe.id} recipe={recipe} isFullDescription={props.isFullDescription} />;
+            return (
+                <Recipe
+                    key={recipe.id}
+                    recipe={recipe}
+                    isFullDescription={isFullDescription}
+                    onEditRecipe={onEditRecipe} 
+                />
+            );
         });
     }
 
     return (
         <div className="recipe-list">
-            {getRecipeList(props.recipeList)}
+            {getRecipeList(recipeList)}
         </div>
     );
 }

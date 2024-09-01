@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Icon from "@mdi/react";
@@ -13,11 +14,7 @@ function ViewSwitcher({ viewType, setViewType, isFullDescription, setIsFullDescr
                 <div className="ms-auto d-flex">
                     <Button
                         variant="outline-primary"
-                        onClick={() =>
-                            setViewType((currentState) => {
-                                return currentState === "grid" ? "table" : "grid";
-                            })
-                        }
+                        onClick={() => setViewType(isGrid ? "table" : "grid")}
                         className="me-2"
                     >
                         <Icon size={1} path={isGrid ? mdiTable : mdiViewGridOutline} />{" "}

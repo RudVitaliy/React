@@ -15,22 +15,21 @@ function SearchForm({ setSearchBy }) {
     function handleInputChange(event) {
         setSearchInput(event.target.value);
         if (!event.target.value) {
-            setSearchBy(""); 
+            setSearchBy("");
         }
     }
 
     return (
         <Form className="d-flex" onSubmit={handleSearch}>
             <Form.Control
-                style={{ maxWidth: "150px" }}
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
                 value={searchInput}
                 onChange={handleInputChange}
+                className="me-2"
             />
             <Button
-                style={{ marginLeft: "8px" }}
                 variant="outline-success"
                 type="submit"
             >

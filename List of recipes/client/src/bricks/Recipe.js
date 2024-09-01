@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 const formatIngredient = (ingredient, amount, unit) => {
   return `${amount} ${unit} ${ingredient.name}`;
 };
 
-function Recipe({ recipe, isFullDescription }) {
+function Recipe({ recipe, isFullDescription, onEditRecipe }) {
   const { name, imgUri, description, ingredients: ingredientData } = recipe;
-  const [ingredients, setIngredients] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [ingredients, setIngredients] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
 
   const shortDescription = description.length > 100 ? description.substring(0, 100) + "..." : description;
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchIngredients = async () => {
       try {
         const fetchedIngredients = await Promise.all(
@@ -24,6 +25,7 @@ function Recipe({ recipe, isFullDescription }) {
               throw new Error('Network response was not ok');
             }
             const ingredientDetails = await response.json();
+            console.log('Fetched ingredient details:', ingredientDetails); 
             return {
               ...ingredientDetails,
               amount: ingredient.amount,
@@ -31,8 +33,10 @@ function Recipe({ recipe, isFullDescription }) {
             };
           })
         );
+        console.log('Fetched ingredients:', fetchedIngredients); 
         setIngredients(fetchedIngredients);
       } catch (error) {
+        console.error('Error fetching ingredients:', error);
         setError(error);
       } finally {
         setLoading(false);
@@ -54,7 +58,7 @@ function Recipe({ recipe, isFullDescription }) {
           <div>Loading ingredients...</div>
         ) : error ? (
           <div>Error loading ingredients: {error.message}</div>
-        ) : ingredients.length > 0 && (
+        ) : ingredients.length > 0 ? (
           <div className="ingredients-list">
             <h5>Ingredients:</h5>
             <ul>
@@ -65,7 +69,12 @@ function Recipe({ recipe, isFullDescription }) {
               ))}
             </ul>
           </div>
+        ) : (
+          <div>No ingredients available</div>
         )}
+        <Button variant="secondary" onClick={() => onEditRecipe(recipe)}>
+          Edit
+        </Button>
       </Card.Body>
     </Card>
   );
